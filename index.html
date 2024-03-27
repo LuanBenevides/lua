@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <title>Love</title>
+</head>
+<body>
+    <div class="card-photos">
+        <p>Lua, que ilumina a minha vida: </p>
+        <div class="lua-oito-bits" id="oito"></div>
+
+        <div class="lua-dezesseis-bits oculta" id="dezesseis"></div>
+        
+        <div class="lua-trinta-e-dois-bits oculta" id="trintaedois"></div>
+
+        <div class="lua-quatrok oculta" id="quatrok"></div>
+
+        <select id="meuSelect">
+            <option value="8">8 BITs</option>
+            <option value="16">16 BITs</option>
+            <option value="32">32 BITs</option>
+            <option value="4">4K</option>
+        </select>
+    </div>
+
+    <script>
+        var selectElement = document.getElementById("meuSelect");
+
+        var oito = document.getElementById("oito");
+        var dezesseis = document.getElementById("dezesseis");
+        var trintaEDois = document.getElementById("trintaedois");
+        var quatrok = document.getElementById("quatrok");
+
+        var valorSelecionado;
+
+        selectElement.addEventListener("change", function() {
+            valorSelecionado = selectElement.value;
+            trocaImagem(valorSelecionado);
+        });
+
+        function trocaImagem(valorSelecionado) {
+            switch(valorSelecionado) {
+                case "8":
+                    mostraLuaOitoBits();
+                break;
+                case "16":
+                    mostraLuaDezesseisBits();
+                break;
+                case "32":
+                    mostraLuaTrintaEDois();
+                break;
+                case "4":
+                    mostraLuaQuatroK();
+                break;
+            }
+        
+        }
+        const mostraLuaOitoBits = () => {
+            oito.classList.contains("oculta") && oito.classList.remove("oculta");
+            dezesseis.classList.add("oculta");
+            trintaEDois.classList.add("oculta");
+            quatrok.classList.add("oculta");
+        }
+
+        const mostraLuaDezesseisBits = () => {
+            dezesseis.classList.contains("oculta") && dezesseis.classList.remove("oculta");
+            oito.classList.add("oculta");
+            trintaEDois.classList.add("oculta");
+            quatrok.classList.add("oculta");
+        }
+
+        const mostraLuaTrintaEDois = () => {
+            trintaEDois.classList.contains("oculta") && trintaEDois.classList.remove("oculta");
+            oito.classList.add("oculta");
+            dezesseis.classList.add("oculta");
+            quatrok.classList.add("oculta");
+        }
+
+        const mostraLuaQuatroK = () => {
+            quatrok.classList.contains("oculta") && quatrok.classList.remove("oculta");
+            oito.classList.add("oculta");
+            dezesseis.classList.add("oculta");
+            trintaEDois.classList.add("oculta");
+
+            window.alert("Te amo, amor da minha vida S2")
+        }
+    </script>
+</body>
+</html>

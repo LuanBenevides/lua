@@ -1,0 +1,58 @@
+body {
+    background-color: #181818;
+}
+
+.card-photos {
+    padding: 0px;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    margin: 0px auto;
+    color: #fff;
+    font-size: 20px;
+}
+.card-photos select {
+    width: 180px;
+}
+.lua-oito-bits {
+    background-image: url('./resources/lua-oito.png');
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    width: 180px;
+    height: 180px;
+}
+.lua-dezesseis-bits {
+    background-image: url('./resources/lua-dezesseis.png');
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    width: 180px;
+    height: 180px;
+}
+
+.lua-trinta-e-dois-bits {
+    background-image: url('./resources/lua-trinta-e-dois.png');
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    width: 180px;
+    height: 180px;
+}
+
+.lua-quatrok {
+    background-image: url('./resources/lua-quatrok.png');
+    background-position: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    width: 180px;
+    height: 180px;
+}
+
+.oculta {
+    display: none;
+}
